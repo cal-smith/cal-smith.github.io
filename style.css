@@ -12,8 +12,12 @@ a:link, a:visited{
 	color:#57A7C7;
 }
 
+h1{
+	color: #306B73;
+}
+
 .list div{
-	border-top: black 1px solid;
+	border-top: #2C4A68 1px solid;
 	margin-top: 10px;
 	padding-top: 5px;
 }
