@@ -34,7 +34,7 @@ h1{
 	display: none;
 }
 
-@media only screen (min-device-width:700) and (max-device-width:1050){
+@media only screen (min-width:700) and (max-width:1050){
 	.tablet{
 		display: block;
 	}
