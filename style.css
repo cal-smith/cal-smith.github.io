@@ -34,7 +34,7 @@ h1{
 	display: none;
 }
 
-@media(max-device-width:800){
+@media(max-device-width:800) and (min-resolution: 192dpi){
 	.tablet{
 		display: block;
 	}
