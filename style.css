@@ -26,8 +26,34 @@ h1{
 	background: aliceblue;	
 }
 
+.desktop{
+	display: block;
+}
+
+.tablet .mobile{
+	display: none;
+}
+
 @media(max-width:800){
+	.tablet{
+		display: block;
+	}
+	
+	.desktop .mobile{
+		display: none;
+	}
+}
+
+@media(max-width:500){
 	.list div{
 		border-top: dimgrey 1px solid;
+	}
+	
+	.mobile{
+		display: block;
+	}
+	
+	.desktop .tablet{
+		display: none;
 	}
 }
