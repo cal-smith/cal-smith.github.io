@@ -1,3 +1,7 @@
 body{
 	color: #1C1C1C;
 }
+
+a:link a:visited{
+	color:#57A7C7;
+}
