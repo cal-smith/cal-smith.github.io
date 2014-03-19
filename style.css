@@ -46,7 +46,7 @@ h1{
 
 @media(max-width:500){
 	.list div{
-		border-top: dimgrey 1px solid;
+		border-top: #E2E2E2 1px solid;
 	}
 	
 	.mobile{
