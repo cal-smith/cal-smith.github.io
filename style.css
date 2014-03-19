@@ -26,7 +26,7 @@ h1{
 	background: aliceblue;	
 }
 
-@media(max-width=800){
+@media(max-width:800){
 	.list div{
 		border-top: dimgrey 1px solid;
 	}
