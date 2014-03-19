@@ -11,3 +11,9 @@ a:link, a:visited{
 	text-decoration: none;
 	color:#57A7C7;
 }
+
+.list div{
+	border-top: black 1px solid;
+	margin-top: 10px;
+	padding-top: 5px;
+}
