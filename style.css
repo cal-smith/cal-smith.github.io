@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300);
 
 body{
 	color: #1C1C1C;
 	font-size: 20px;
 	font-family: 'Lato', sans-serif;
-	font-weight: 100;
+	font-weight: 300;
 }
 
 a:link, a:visited{
