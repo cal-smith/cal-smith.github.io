@@ -24,7 +24,8 @@ h1{
 }
 
 .list div:hover{
-	background: aliceblue;	
+	background: aliceblue;
+	cursor: pointer;	
 }
 
 .desktop{
