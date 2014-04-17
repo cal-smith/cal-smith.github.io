@@ -28,6 +28,11 @@ h1{
 	cursor: pointer;	
 }
 
+.blog ul{
+	list-style: none;
+	padding: 0;
+}
+
 .desktop{
 	display: block;
 }
