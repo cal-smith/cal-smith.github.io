@@ -156,8 +156,14 @@ h1{
 	z-index: 2;
 }
 
-pre{
+.highlight{
+	padding: 5px;
 	overflow: auto;
+	background: #4B4B4B;
+}
+
+pre{
+	margin: 0;
 }
 
 /*media queries*/
