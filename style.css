@@ -80,7 +80,8 @@ body{
 
 a:link, a:visited{
 	text-decoration: none;
-	color:#57A7C7;
+	/*color:#57A7C7;*/
+	color: #32A5DB;
 }
 
 h1{
