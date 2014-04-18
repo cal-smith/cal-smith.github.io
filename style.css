@@ -25,6 +25,7 @@ h3{
 	left: -150px;
 	top: 0px;
 	height: 100%;
+	z-index: 3;
 }
 
 .menu span{
@@ -39,6 +40,11 @@ h3{
 
 .menu span:hover, .menu:hover{
 	left: 0px;
+	transition: all 0.2s ease;
+}
+
+.menu:hover + .main{
+	padding-left: 130px;
 	transition: all 0.2s ease;
 }
 
@@ -77,6 +83,7 @@ body{
 	margin-top: 40px;
 	background: #fff;
 	z-index: 2;
+	transition: all 0.2s ease;
 }
 
 a:link, a:visited{
@@ -191,6 +198,10 @@ pre{
 	.post{
 		margin-top: 50px;
 	}
+	
+	.menu{
+		z-index: 1;
+	}
 
 	.menu span{
 		background: #4B4B4B;
@@ -201,6 +212,10 @@ pre{
 
 	.menu:hover, .menu span:hover{
 		z-index: 3;
+	}
+	
+	.menu:hover + .main{
+		padding-left: 0px;
 	}
 }
 
