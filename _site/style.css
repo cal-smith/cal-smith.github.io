@@ -71,7 +71,7 @@ h3{
 
 /*mainpage stuff*/
 body{
-	color: rgba(68, 66, 66, 1);
+	color: #444242;
 	font-size: 20px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -157,8 +157,6 @@ a:link, a:visited{
 
 .post-body{
 	max-width: 800px;
-	background: #fff;
-	z-index: 2;	
 }
 
 .highlight{
