@@ -16,10 +16,12 @@
 				-moz-transform: rotate3d(0, 1, 0, 20deg);
 				-webkit-transform: rotate3d(0, 1, 0, 20deg);
 				position: relative;
-				left: 35%;
 				top: 9px;
 				font-family: sans-serif;
-				font-size: 2em
+				font-size: 2em;
+				animation: what-the-spin 10s infinite linear;
+				-moz-animation: what-the-spin 10s infinite linear;
+				-webkit-animation: what-the-spin 10s infinite linear;
 			}
 			.four04{
 				position: absolute;
@@ -30,6 +32,33 @@
 			@media (max-width: 1100px){
 				.fu{
 					left: 10%;
+				}
+			}
+
+			@keyframes what-the-spin{
+				0%{
+					transform: rotateY(0deg);
+				}
+				100%{
+					transform: rotateY(360deg);
+				}
+			}
+			@-moz-keyframes what-the-spin{
+				0%{
+					transform: rotateY(0deg);
+					-moz-transform: rotateY(0deg);
+				}
+				100%{ 
+					transform: rotateY(360deg);
+					-moz-transform: rotateY(360deg);
+				}
+			}
+			@-webkit-keyframes what-the-spin{
+				0%{
+					-webkit-transform: rotateY(0deg);
+				}
+				100%{ 
+					-webkit-transform: rotateY(360deg);
 				}
 			}
 		</style>
