@@ -2,6 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400);
 /*some general fiddling*/
 h1{
+	color: #3B99C5;
 	font-size: 3em;
 	margin: 0;
 }
@@ -82,10 +83,6 @@ a:link, a:visited{
 	text-decoration: none;
 	/*color:#57A7C7;*/
 	color: #32A5DB;
-}
-
-h1{
-	color: #306B73;
 }
 
 .list div{
