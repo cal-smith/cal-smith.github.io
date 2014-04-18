@@ -180,6 +180,10 @@ pre{
 	.desktop, .mobile{
 		display: none;
 	}
+
+	.menu:hover + .main{
+		padding-left: 160px;
+	}
 }
 
 @media (max-width:500px){
