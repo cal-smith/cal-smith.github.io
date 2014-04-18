@@ -5,12 +5,16 @@
 		<style type="text/css">
 			body{
 				overflow: hidden;
+				margin: 0;
 			}
+			
 			.a3d{
 				perspective: 250px;
 				-moz-perspective: 250px;
 				-webkit-perspective: 250px;
+				height: 1em;
 			}
+			
 			.fu{
 				transform: rotate3d(0, 1, 0, 20deg);
 				-moz-transform: rotate3d(0, 1, 0, 20deg);
@@ -23,12 +27,17 @@
 				-moz-animation: what-the-spin 10s infinite linear;
 				-webkit-animation: what-the-spin 10s infinite linear;
 			}
+			.fu span{
+				text-overflow: clip;
+			}
 			.four04{
 				position: absolute;
 				top:50%;
 				font-family: monospace;
-				font-size: 5em;
+				width: 100%;
+				font-size: 4em;
 			}
+			
 			@media (max-width: 1100px){
 				.fu{
 					left: 10%;
