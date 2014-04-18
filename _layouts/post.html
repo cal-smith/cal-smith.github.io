@@ -18,14 +18,16 @@
 	</head>
 	<body>
 		{% include sidebar.html %}
-		<div class="post">
-			<div class="post-title">
-				<h1>{{ page.title }}</h1>
-				<span>WordCount: {{ page.content | number_of_words }}</span>
+		<div class="main">
+			<div class="post">
+				<div class="post-title">
+					<h1>{{ page.title }}</h1>
+					<span>WordCount: {{ page.content | number_of_words }}</span>
+				</div>
+				<div class="post-body">
+					{{ page.content | markdownify }}
+				</div>
 			</div>
-			<div class="post-body">
-				{{ page.content | markdownify }}
-			</div>
-		</div>
+		</body>
 	</body>
 </html>
