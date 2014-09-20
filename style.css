@@ -201,13 +201,13 @@ pre{
 		margin-top: 50px;
 	}
 	
-	/*.menu{
+	.menu{
 		z-index: 1;
 	}
 
 	.menu span{
 		background: #4B4B4B;
-		position: fixed;
+		position: absolute;
 		left: 8px;
 		z-index: 1;
 	}
@@ -218,7 +218,7 @@ pre{
 	
 	.menu:hover + .main{
 		padding-left: 0px;
-	}*/
+	}
 }
 
 @media (min-width: 1200px){
