@@ -201,7 +201,7 @@ pre{
 		margin-top: 50px;
 	}
 	
-	.menu{
+	/*.menu{
 		z-index: 1;
 	}
 
@@ -218,7 +218,7 @@ pre{
 	
 	.menu:hover + .main{
 		padding-left: 0px;
-	}
+	}*/
 }
 
 @media (min-width: 1200px){
