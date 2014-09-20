@@ -81,8 +81,6 @@ body{
 
 .main{
 	margin-top: 40px;
-	background: #fff;
-	z-index: 2;
 	transition: all 0.2s ease;
 }
 
@@ -207,13 +205,11 @@ pre{
 
 	.menu span{
 		background: #4B4B4B;
-		position: absolute;
+		position: inherit;
 		left: 8px;
-		z-index: 1;
 	}
 
 	.menu:hover, .menu span:hover{
-		z-index: 3;
 	}
 	
 	.menu:hover + .main{
