@@ -15,6 +15,11 @@ h3{
 	margin: 0;
 }
 
+code {
+	color: #d3d0c8;
+	background: #2d2d2d;
+}
+
 /*menu*/
 .menu{
 	width: 130px;
