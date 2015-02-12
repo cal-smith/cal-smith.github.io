@@ -78,3 +78,14 @@ function frame (t){
 	render(t);
 }
 window.requestAnimationFrame(frame);
+
+function dl(){
+	var dl = document.createElement('a');
+	ctx.fillStyle = "white";
+	ctx.fillRect(0, 0, client.x, client.y);
+	dl.href = canvas.toDataURL();
+	dl.download = 'dl.png';
+	document.body.appendChild(dl);
+	dl.click();
+	document.body.removeChild(dl);
+}
