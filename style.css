@@ -20,6 +20,12 @@ code {
 	background: #2d2d2d;
 }
 
+/*canvas things*/
+#c{
+	position: fixed;
+	z-index: -1;
+}
+
 /*menu*/
 .menu{
 	width: 130px;
@@ -34,9 +40,11 @@ code {
 }
 
 .menu span{
+	background: #4B4B4B;
 	padding: 5px;
 	position: fixed;
-	left: 5px;
+	top: 8px;
+	left: 8px;
 }
 
 .menu span, .menu{
@@ -96,8 +104,7 @@ a:link, a:visited{
 }
 
 .list div{
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding: 5px;
 	max-width: 800px;
 }
 
@@ -122,6 +129,7 @@ a:link, a:visited{
 	border-top: 1px solid silver;
 	border-left: 1px solid silver;
 	margin-top: 10px;
+	background: white;/*!!!*/
 }
 
 .blog-item h3{
@@ -209,7 +217,6 @@ pre{
 	}
 
 	.menu span{
-		background: #4B4B4B;
 		position: inherit;
 		left: 8px;
 	}
