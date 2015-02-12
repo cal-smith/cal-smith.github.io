@@ -9,6 +9,7 @@ var numcircles = 200*(client.x/client.y);
 var ctx = canvas.getContext('2d');
 var x = 0;
 var y = 0;
+var small = {};
 var right = true;
 var bottom = false;
 window.addEventListener('resize', function(e){
@@ -40,6 +41,7 @@ var Circle = function (point, s, ctx, color){
 	this.scale = s;
 	this.ctx = ctx;
 	this.color = (typeof color === 'undefined')?"blue":color;
+	this.id = Date.now()*this.scale;
 };
 
 Circle.prototype.render = function() {
@@ -70,11 +72,18 @@ function render(t){
 	while(circles.length < numcircles){
 		circles.push(new Circle({x:(Math.random()*(client.x*2)|0)-client.x, y:(Math.random()*(client.y*2)|0)-client.y}, Math.random()*(5-0.5+1)+0.5, ctx, "rgba("+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*1)+")"));
 	}
+	small = {};
 	for (var i = 0; i < circles.length; i++) {
 		circles[i].render();
+		if (circles[i].scale <= 2) {
+			small[circles[i].id] = circles[i].scale;
+		}
 	}
 	circles = circles.filter(function(c){
-		if ((c.x > client.x) || (c.x < 0) || (c.y > client.y) || (c.y < 0)) {
+		if ((c.x > client.x+c.size) || (c.x < 0-c.size) || (c.y > client.y+c.size) || (c.y < 0-c.size)) {
+			return false;
+		}
+		if (Object.keys(small).length > circles.length/4 && c.scale <= 2) {
 			return false;
 		}
 		return true;
