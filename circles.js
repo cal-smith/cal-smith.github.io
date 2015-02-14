@@ -9,6 +9,13 @@ var numcircles = 200*(client.x/client.y);
 var ctx = canvas.getContext('2d');
 var right = true;
 var bottom = false;
+v = new Date("Feb 14");
+d = new Date();
+var valentine = false;
+if (d.getMonth() === v.getMonth() && d.getDate() === v.getDate()) {
+	valentine = true;
+};
+
 window.addEventListener('resize', function(e){
 	client = {x:window.innerWidth-16, y:window.innerHeight-16}
 	canvas.width = client.x;
@@ -46,9 +53,44 @@ Circle.prototype.render = function() {
 	this.ctx.arc(this.x*this.scale, this.y*this.scale, this.size, 0, 2*Math.PI);
 	this.ctx.fill();
 };
+
+var Heart = function (point, s, ctx, color){
+	this.x = point.x;
+	this.y = point.y;
+	this.point = point;
+	this.size = 50*s;
+	this.scale = s;
+	this.ctx = ctx;
+	this.color = (typeof color === 'undefined')?"blue":color;
+};
+
+Heart.prototype.render = function() {
+	this.x += right?0.1:-0.1
+	this.y += bottom?0.1:-0.1;
+	this.ctx.fillStyle = this.color;
+	this.ctx.beginPath();
+	this.ctx.arc(this.x*this.scale, this.y*this.scale, this.size, 0, 2*Math.PI);
+	this.ctx.arc((this.x-80)*this.scale, (this.y)*this.scale, this.size, 0, 2*Math.PI);
+	this.ctx.moveTo((this.x-120)*this.scale, (this.y+30)*this.scale);
+	this.ctx.lineTo((this.x+40)*this.scale, (this.y+30)*this.scale);
+	this.ctx.lineTo((this.x-40)*this.scale, (this.y+100)*this.scale);
+	this.ctx.fill();
+};
+
 circles = [];
+function generate(){
+	return !valentine?
+	new Circle({x:(Math.random()*(client.x*2)|0)-client.x, 
+		y:(Math.random()*(client.y*2)|0)-client.y}, 
+		Math.random()*(5-0.5+1)+0.5, ctx, 
+		"rgba("+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*1)+")"):
+	new Heart({x:(Math.random()*(client.x*2)|0)-client.x, 
+		y:(Math.random()*(client.y*2)|0)-client.y}, 
+		Math.random()*(5-0.5+1)+0.5, ctx, 
+		"rgba("+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*1)+")");
+}
 while(circles.length < numcircles){
-	circles.push(new Circle({x:(Math.random()*(client.x*2)|0)-client.x, y:(Math.random()*(client.y*2)|0)-client.y}, Math.random()*(5-0.5+1)+0.5, ctx, "rgba("+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*1)+")"));
+	circles.push(generate());
 }
 
 function render(t){
@@ -60,7 +102,7 @@ function render(t){
 	}
 	ctx.clearRect(0, 0, client.x, client.y);
 	while(circles.length < numcircles){
-		circles.push(new Circle({x:(Math.random()*(client.x*2)|0)-client.x, y:(Math.random()*(client.y*2)|0)-client.y}, Math.random()*(5-0.5+1)+0.5, ctx, "rgba("+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*255|0)+","+(Math.random()*1)+")"));
+		circles.push(generate());
 	}
 	for (var i = 0; i < circles.length; i++) {
 		circles[i].render();
@@ -81,8 +123,8 @@ window.requestAnimationFrame(frame);
 
 function dl(){
 	var dl = document.createElement('a');
-	ctx.fillStyle = "white";
-	ctx.fillRect(0, 0, client.x, client.y);
+	//ctx.fillStyle = "white";
+	//ctx.fillRect(0, 0, client.x, client.y);
 	dl.href = canvas.toDataURL();
 	dl.download = 'dl.png';
 	document.body.appendChild(dl);
