@@ -7,7 +7,7 @@ var canvas = e('c');
 var client = {x:window.innerWidth-16, y:window.innerHeight-16};
 canvas.width = client.x;
 canvas.height = client.y;
-var numcircles = 200*(client.x/client.y);
+var numcircles = 150*(client.x/client.y);
 var ctx = canvas.getContext('2d');
 var right = true;
 var bottom = false;
@@ -106,7 +106,7 @@ function render(t){
 		if (circles[i] == null) {
 			circles[i] = generate();
 		}
-		
+
 		if (circles[i].x*circles[i].scale > client.x+circles[i].size || circles[i].x*circles[i].scale < -circles[i].size) {
 			circles[i] = generate();
 		}
