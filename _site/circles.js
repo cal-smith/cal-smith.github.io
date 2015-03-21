@@ -103,6 +103,10 @@ function render(t){
 	}
 	ctx.clearRect(0, 0, client.x, client.y);
 	for (var i = 0; i < numcircles; i++) {
+		if (circles[i] == null) {
+			circles[i] = generate();
+		}
+		
 		if (circles[i].x*circles[i].scale > client.x+circles[i].size || circles[i].x*circles[i].scale < -circles[i].size) {
 			circles[i] = generate();
 		}
