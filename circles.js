@@ -102,7 +102,7 @@ function render(t){
 		bottom = !bottom;
 	}
 	ctx.clearRect(0, 0, client.x, client.y);
-	for (var i = 0; i < circles.length; i++) {
+	for (var i = 0; i < numcircles; i++) {
 		if ((circles[i].x > client.x) || (circles[i].x < -circles[i].size)) {
 			circles[i] = generate();
 		}
