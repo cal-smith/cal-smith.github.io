@@ -103,11 +103,11 @@ function render(t){
 	}
 	ctx.clearRect(0, 0, client.x, client.y);
 	for (var i = 0; i < numcircles; i++) {
-		if ((circles[i].x > client.x) || (circles[i].x < -circles[i].size)) {
+		if (circles[i].x*circles[i].scale > client.x+circles[i].size || circles[i].x*circles[i].scale < -circles[i].size) {
 			circles[i] = generate();
 		}
 
-		if ((circles[i].y > client.y) || (circles[i].y < -circles[i].size)) {
+		if (circles[i].y*circles[i].scale > client.y+circles[i].size || circles[i].y*circles[i].scale < -circles[i].size) {
 			circles[i] = generate();
 		}
 		circles[i].render();
