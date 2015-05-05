@@ -107,11 +107,13 @@ a:link, a:visited{
 
 .list div{
 	padding: 5px;
+	margin-top: 10px;
 	max-width: 800px;
+	background: white;
 }
 
 .list div:hover{
-	background: rgba(255, 255, 255, 0.7);
+	background: #69FF9B;
 	cursor: pointer;	
 }
 
