@@ -11,10 +11,9 @@ var numcircles = 100*(client.x/client.y);
 var ctx = canvas.getContext('2d');
 var right = true;
 var bottom = false;
-var v = new Date("Feb 14");
 var d = new Date();
 var valentine = false;
-if (d.getMonth() === v.getMonth() && d.getDate() === v.getDate()) {
+if (d.getMonth() === 1 && d.getDate() === 14) {
 	valentine = true;
 };
 
